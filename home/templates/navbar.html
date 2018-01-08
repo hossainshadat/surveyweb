@@ -1,0 +1,21 @@
+    <nav>
+        <div class="container">
+            <ul class="nav nav-pills">
+                <li role="presentation"><a href="{% url 'index' %}" class="padding-right-33">Home</a></li>
+                <li class="dropdown">
+                    <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true"> About Data <span class="caret"></span> </button>
+                    <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
+                        <li><a href="{% url 'organization' %}">Organizational Abstract</a></li>
+                        <li><a href="{% url 'logistic' %}">Logistics</a></li>
+                        <li><a href="{% url 'human_res' %}">Human Resources</a></li>
+                        <li><a href="{% url 'reports' %}">Reports</a></li>
+                    </ul>
+                </li>
+                <li role="presentation"><a href="{% url 'major_works' %}">Major Works</a></li>
+                <li role="presentation"><a href="{% url 'upworking_works' %}">Upcoming Works</a></li>
+                <li role="presentation"><a href="{% url 'ongoing_works' %}">Works In Progress</a></li>
+                <li role="presentation"><a href="{% url 'we_offer' %}">We Offer</a></li>
+                <li role="presentation"><a href="{% url 'index' %}#contact" id="smooth-contact">Contact Us</a></li>
+            </ul>
+        </div>
+    </nav>

@@ -1,0 +1,80 @@
+/*banner section*/
+
+header .login-search .log-in {
+    padding: 0;
+    padding: 15px 40px;
+    border-radius: 5px;
+    border: 1px solid #2532d3;
+    cursor: pointer;
+}
+
+.banner h1 {
+    text-shadow: 1px 1px 9px rgba(0, 0, 0, 0.15);
+    color: #ffffff;
+    font-size: 53px;
+    font-weight: 500;
+    max-width: 870px;
+}
+
+.gallery {
+    padding-bottom: 100px;
+    margin-top: 80px;
+}
+
+.slick-slide img {
+    display: block;
+    margin: 0 5px;
+    max-width: 100%;
+}
+
+.gallery h1 {
+    color: #2a2a2a;
+    font-size: 33px;
+    font-weight: 400;
+    margin-top: 64px;
+    margin-bottom: 51px;
+}
+
+.gallery img {
+    max-width: 95%;
+}
+
+.footer {
+    padding: 0;
+    padding-bottom: 42px;
+}
+
+.news {
+    padding-bottom: 0;
+    margin-bottom: 0;
+}
+
+.contact-us {
+    background: #fff;
+    padding-top: 0;
+}
+
+.contact-us h1 {
+    color: #364dfe;
+    font-size: 29px;
+    font-weight: 500;
+    margin-bottom: 78px;
+}
+
+@media screen and (max-width:767px) {
+    .banner h1 {
+        color: #ffffff;
+        font-size: 28px;
+        line-height: 130%;
+    }
+    .gallery {
+        padding-bottom: 20px;
+    }
+    .contact-us h1 {
+        margin-bottom: 40px;
+    }
+}
+
+    .container-fluid {
+      padding: 0;
+    }

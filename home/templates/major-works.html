@@ -1,0 +1,167 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+
+    {% include 'navbar.html' %}
+    <div class="ongoing-works">
+        <div class="container">
+            <h2>Major Works</h2>
+            <h4>DATA's major work at a glance.ongoing-works h2</h4></div>
+    </div>
+    <div class="section sorting">
+        <div class="container">
+            <!--<div class="left pull-left"><span>Sort By</span><span><div class="dropdown">-->
+    <!--<button class="btn dropdown-toggle" type="button" data-toggle="dropdown">Serial no-->
+    <!--<span class="caret"></span></button>-->
+                    <!--<ul class="dropdown-menu">-->
+                        <!--<li><a href="#">HTML</a></li>-->
+                        <!--<li><a href="#">CSS</a></li>-->
+                        <!--<li><a href="#">JavaScript</a></li>-->
+                    <!--</ul>-->
+                <!--</div>-->
+                <!--</span> <span><a href="#"><img src="{% static 'img/up.png' %}" alt=""></a></span></div>-->
+            <!--<div class="pull-right right-part"><span>Show</span><span style="display: inline-block;">-->
+                    <!--<form action="" method="get">-->
+                        <!--<select name="per_page">-->
+                        <!--<option value="30">30 per page</option>-->
+                        <!--<option value="50">60 per page</option>-->
+                        <!--<option value="60">100 per page</option>-->
+                        <!--<option value="all">all page</option>-->
+                        <!--</select>-->
+                        <!--<input type="submit" Value="Go">-->
+                    <!--</form>-->
+            <!--</span>-->
+                <!--<span class="per-page-sort">per page</span><span style="display: inline-block;"> <span><a href="#" class="btn per-page">1</a><a-->
+                    <!--href="#" class="btn per-page">2</a><a href="#" class="btn per-page">3</a><a href="#" class="btn per-page">4</a><a-->
+                    <!--href="#" class="btn next"><span class="glyphicon glyphicon-play" aria-hidden="true"></span></a>-->
+            <!--</span>-->
+            <!--</span>-->
+            <!--</div>-->
+            <div class="row">
+                <div class="col-xs-12">
+                    <div class="table-responsive">
+                        <table id="example" summary="This table shows how to create responsive tables using Bootstrap's default functionality"
+                               class="table table-bordered table-hover display" cellspacing="0" width="100%">
+                            <thead class="text-center">
+                            <tr>
+                                <th class="count  fb">#</th>
+                                <th class="Project fb">Project</th>
+                                <th class="project-type fb">Project Type</th>
+                                <th class="time-period fb">Time Period</th>
+                                <th class="funding fb">Funding Agency</th>
+                                <th class="associates fb">Associates / Researchers</th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            {% for work in major %}
+                                <tr>
+                                    <td class="count">{{ work.serial }}</td>
+                                    <td class="Project">{{ work.project_name }}</td>
+                                    <td class="project-type">{{ work.project_type }}</td>
+                                    <td class="time-period">{{ work.time_period }} {{ progress.year }}</td>
+                                    <td class="funding">{{ work.funding_agency }}</td>
+                                    <th class="associates">{{ work.project_description }} </th>
+                                </tr>
+                            {% endfor %}
+                            </tbody>
+                            {#                            <tr>#}
+                            {#                                <td class="count">2</td>#}
+                            {#                                <td class="Project">Bangladesh Aquaculture and Horticulture for Nutrition Research (BAHNR) , Baseline There will be three (3) follow up rounds of surveys.</td>#}
+                            {#                                <td class="project-type">Baseline</td>#}
+                            {#                                <td class="time-period">October 2015 - June 2016</td>#}
+                            {#                                <td class="funding">Tufts University Nutrition Innovation Lab. Sole Sourced</td>#}
+                            {#                                <th class="associates">Tufts University Nutrition Innovation Lab and Data Analysis And Technical Assistance Limited</th>#}
+                            {#                            </tr>#}
+                            {#                            <tr>#}
+                            {#                                <td class="count">3</td>#}
+                            {#                                <td class="Project">Agriculture Nutrition Gender Linkage (ANGeL) Study: RCT Design</td>#}
+                            {#                                <td class="project-type">Midline</td>#}
+                            {#                                <td class="time-period">November 2015 - June 2016</td>#}
+                            {#                                <td class="funding">IFPRI. Sole Sourced </td>#}
+                            {#                                <th class="associates">Data Analysis And Technical Assistance Limited, and International Food Policy Research Institute (IFPRI). </th>#}
+                            {#                            </tr>#}
+                            {#                            <tr>#}
+                            {#                                <td class="count">4</td>#}
+                            {#                                <td class="Project">Endline Survey of "Maximizing the Quality of Scaling Up Nutrition (SUN) programmes" funded by DFID in 2015</td>#}
+                            {#                                <td class="project-type">Midline</td>#}
+                            {#                                <td class="time-period">February 2016</td>#}
+                            {#                                <td class="funding">IDS at the University of Sussex. Sole sourced </td>#}
+                            {#                                <th class="associates">IDS, IFPRI and Data Analysis and Technical Assistance Limited</th>#}
+
+                        </table>
+                    </div>
+                    <!--end of .table-responsive-->
+                </div>
+                <!--<div class="col-xm-12">-->
+                    <!--<div class="text-center pagination ">-->
+                        <!--<span class="step-links">-->
+                                <!--<ul class=" pagination">-->
+                                    <!--{% if major.has_previous %}-->
+                                        <!--<li><a href="?page={{ major.previous_page_number }}">&laquo;</a></li>-->
+                                    <!--{% else %}-->
+                                        <!--<li class="disabled"><span>&laquo;</span></li>-->
+                                    <!--{% endif %}-->
+                                    <!--{% for i in major.paginator.page_range %}-->
+                                        <!--{% if major.number == i %}-->
+                                            <!--<li class="active"><span>{{ i }} <span class="sr-only">(current)</span></span></li>-->
+                                        <!--{% else %}-->
+                                            <!--<li><a href="?page={{ i }}">{{ i }}</a></li>-->
+                                        <!--{% endif %}-->
+                                    <!--{% endfor %}-->
+                                    <!--{% if major.has_next %}-->
+                                        <!--<li><a href="?page={{ major.next_page_number }}">&raquo;</a></li>-->
+                                    <!--{% else %}-->
+                                        <!--<li class="disabled"><span>&raquo;</span></li>-->
+                                    <!--{% endif %}-->
+                                <!--</ul>-->
+<!--{#                                    <ul class="pagination">#}-->
+<!--{#                              <li>#}-->
+<!--{#                                <button#}-->
+<!--{#                                  form="{{ form_target }}"#}-->
+<!--{#                                  {% if page_obj.has_previous %}#}-->
+<!--{#                                    name="page"#}-->
+<!--{#                                    value="{{ page_obj.previous_page_number }}"#}-->
+<!--{#                                    type="submit"#}-->
+<!--{#                                  {% else %}#}-->
+<!--{#                                    disabled="disabled"#}-->
+<!--{#                                  {% endif %}>#}-->
+<!--{#                                  prev#}-->
+<!--{#                                </button>#}-->
+<!--{#                              </li>#}-->
+<!--{##}-->
+<!--{#                              {% for page_number in paginator.page_range %}#}-->
+<!--{#                                <li class="{% if page_number = page_obj.number %}active{% endif %}">#}-->
+<!--{#                                  <button#}-->
+<!--{#                                    name="page"#}-->
+<!--{#                                    value="{{ page_number }}"#}-->
+<!--{#                                    type="submit"#}-->
+<!--{#                                    form="{{ form_target }}"#}-->
+<!--{#                                    {% if page_number = page_obj.number %}#}-->
+<!--{#                                      disabled="disabled"#}-->
+<!--{#                                    {% endif %}>#}-->
+<!--{#                                    {{ page_number }}#}-->
+<!--{#                                  </button>#}-->
+<!--{#                                </li>#}-->
+<!--{#                              {% endfor %}#}-->
+<!--{##}-->
+<!--{#                              <li>#}-->
+<!--{#                                <button#}-->
+<!--{#                                  form="{{ form_target }}"#}-->
+<!--{#                                  {% if page_obj.has_next %}#}-->
+<!--{#                                    name="page"#}-->
+<!--{#                                    value="{{ page_obj.next_page_number }}"#}-->
+<!--{#                                    type="submit"#}-->
+<!--{#                                  {% else %}#}-->
+<!--{#                                    disabled="disabled"#}-->
+<!--{#                                  {% endif %}>#}-->
+<!--{#                                  next#}-->
+<!--{#                                </button>#}-->
+<!--{#                              </li>#}-->
+<!--{#                            </ul>#}-->
+                        <!--</span>-->
+                    <!--</div>-->
+                <!--</div>-->
+            </div>
+        </div>
+    </div>
+{% endblock %}

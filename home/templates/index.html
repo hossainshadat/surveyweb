@@ -1,0 +1,234 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+
+{% include 'navbar.html' %}
+
+{#    <div class="banner">#}
+{#        <div class="container">#}
+{#            <h1>Data Analysis and Technical Assistance</h1>#}
+{#            <h4>We offer a customized approach to benefit our clients, specifically designed with regular quality and#}
+{#                considering time constriction.</h4></div>#}
+{#    </div>#}
+    <div id="carousel" class="carousel slide carousel-fade" data-ride="carousel">
+        <ol class="carousel-indicators">
+            <li data-target="#carousel" data-slide-to="0" class="active"></li>
+            <li data-target="#carousel" data-slide-to="1"></li>
+            <li data-target="#carousel" data-slide-to="2"></li>
+        </ol>
+         <div class="carousel-inner">
+             {% for sliders in slider %}
+                 {% if sliders.pk == 1 %}
+            <div class="active item slide-1" style="background: url('/media/{{ sliders.slider }}') no-repeat;">
+                 {% else %}
+            <div class="item slide-2" style="background-image: url('/media/{{ sliders.slider }}');">
+                {% endif %}
+                <div class="container">
+            <h1>Data Analysis and Technical Assistance</h1>
+            <h4>We offer a customized approach to benefit our clients, specifically designed with regular quality and considering time constriction.</h4> </div>
+            </div>
+{#            <div class="item slide-2" style="background-image: url('/media/{{ sliders.slider }}');">#}
+{#                <div class="container">#}
+{#            <h1>Data Analysis and Technical Assistance</h1>#}
+{#            <h4>We offer a customized approach to benefit our clients, specifically designed with regular quality and considering time constriction.</h4> </div>#}
+{#            </div>#}
+{#            <div class="item slide-3" style="background-image: url('/media/{{ sliders.slider }}');">#}
+{#                <div class="container">#}
+{#            <h1>Data Analysis and Technical Assistance</h1>#}
+{#            <h4>We offer a customized approach to benefit our clients, specifically designed with regular quality and considering time constriction.</h4> </div>#}
+{#            </div>#}
+             {% endfor %}
+            </div>
+        </div>
+    <div class="news">
+        <div class="container">
+            <p class="para news-para">International Women's Day 2016: Empowering women with data and evidence in
+                Bangladesh . The rising cost of healthy nutrition . Starting off right:</p>
+                {% for latest in ticker %}
+                    {% if latest.pk == 1 %}
+            <div class="news-block"><span class="news-title">Latest News </span>
+                <marquee behavior="scroll" direction="left"
+                         style="font-size:16px;color: #939aa7;border-bottom:solid 1px #ccc;position: absolute;top: -38px;background-color: #939aa7;">
+                    <p>{{ latest.ticker }}</p>
+                </marquee>
+            </div>
+                    {% endif %}
+                {% endfor %}
+
+            <div class="row info-block ">
+                <div class="col-md-6">
+                    <h1></h1>
+                    <p class="info">DATA is a research consulting firm to applying its technical expertise in support of
+                        finding solutions to pressing social and economic challenges in Bangladesh. Its uniqueness as an
+                        organization stems from the honest devotion, efficiency, and high quality work of its staff and
+                        the prioritization of client satisfaction over profit.  </p>
+                    <p class="info">DATA brings strong analytic approaches to problems with its extensive experience in
+                        survey design, data collection and statistical analysis and use of various major national data
+                        sources such as the Population Census, Household Income Expenditure Survey (HIES), etc. A major
+                        strength of the firm is conducting sophisticated technical research and translating the methods
+                        and results into presentations accessible to a broad, non-technical audience.</p>
+                    <p class="info">Very few organizations in Bangladesh have devoted themselves to the collection and
+                        management of quality data for understanding the underlying socioeconomic issues in the country.
+                        People at DATA are committed to such an effort using state of the art survey methodologies and
+                        employing highly technical data management systems. This has been the key for DATA’s success
+                        over the past fourteen  (14) years helping to produce many excellent research outputs that dealt
+                        with critical issues relating to food-security and agricultural policies, poverty alleviation
+                        programs, nutrition, health, gender and educational achievements of the people in the
+                        country.</p> <a href="#" class="btn learn-more">Learn more about us</a></div>
+                <div class="col-md-6">
+                    <div class="images-block">
+                        {% for collages in collage %}
+                            {% if collages.pk == 1 %}
+                        <img src="/media/{{ collages.image }}" alt="" class="img-1">
+                            {% endif %}
+                        {% if collages.pk == 2 %}
+                        <img src="/media/{{ collages.image }}" alt="" class="img-2">
+                            {% endif %}
+                            {% if collages.pk == 3 %}
+                        <img src="{% static "img/img-3.png" %}" alt="" class="img-3">
+                            {% endif %}
+                            {% if collages.pk == 4 %}
+                        <img src="{% static "img/img-4.png" %}" alt="" class="img-4">
+                            {% endif %}
+                            {% if collages.pk == 5 %}
+                        <img src="{% static "img/img-5.png" %}" alt="" class="img-5">
+                            {% endif %}
+                    {% endfor %}
+                    </div>
+                </div>
+            </div>
+            <div class="row offer">
+                <h1>We Offer</h1>
+{#                <div class="offer-block">#}
+{#                    <div class="row">#}
+{#                        <div class="col-sm-6">#}
+{#                            <p>DATA is committed to providing personalized service to all its clients. The package of#}
+{#                                DATA services includes but not limited to: • Focus group moderation and participatory#}
+{#                                working sessions </p>#}
+{#                            <ul>#}
+{#                                <li><span>Large scale field surveys</span></li>#}
+{#                                <li><span>Socio-economic research and studies</span></li>#}
+{#                                <li><span>Sectoral research and studies</span></li>#}
+{#                                <li><span>Gender research and studies</span></li>#}
+{#                                <li><span>Donors project base research and studies, includes baseline and periodical evaluation studies</span>#}
+{#                                </li>#}
+{#                                <li><span>Market research</span></li>#}
+{#                            </ul>#}
+{#                        </div>#}
+{#                        <div class="col-sm-6">#}
+{#                            <p>DATA is committed to providing personalized service to all its clients. The package of#}
+{#                                DATA services includes but not limited to: • Focus group moderation and participatory#}
+{#                                working sessions </p>#}
+{#                            <ul>#}
+{#                                <li><span>Large scale field surveys</span></li>#}
+{#                                <li><span>Socio-economic research and studies</span></li>#}
+{#                                <li><span>Sectoral research and studies</span></li>#}
+{#                                <li><span>Gender research and studies</span></li>#}
+{#                                <li><span>Donors project base research and studies, includes baseline and periodical evaluation studies</span>#}
+{#                                </li>#}
+{#                                <li><span>Market research</span></li>#}
+{#                            </ul>#}
+{#                        </div>#}
+{#                    </div>#}
+{#                </div>#}
+            </div>
+            <div class="row offer" style="margin-top: 41px;">
+                <div class="offer-block">
+                    {% for training in offer %}
+                    <div class="row">
+                        <div class="col-sm-8">
+                            {% autoescape off %}
+                            <p>{{ training.training_content }} </p>
+                            {% endautoescape %}
+                        </div>
+                        <div class="col-sm-4"><img src="/media/{{ training.weoffer_image }}" alt=""></div>
+                    </div>
+                </div>
+                {% endfor %}
+            </div>
+            <div class="row offer">
+                <h1 class="training-title">Training</h1>
+                <div class="offer-block">
+                    <div class="row">
+                        <div class="col-sm-12">
+                            <p>International Training</p>
+                            <ul>
+                                <li><span>DATA conducts trainings on data collection methods, survey techniques, survey tools, data entry, data and data 			cleaning.</span>
+                                </li>
+                                <li style="margin-bottom: 30px;"><span>DATA conducts trainings on data collection methods, survey techniques, survey tools, data entry, data and data 			cleaning.</span>
+                                </li>
+                            </ul>
+                            <p>Domestic Training</p>
+                            <ul>
+                                <li><span>DATA conducts trainings on data collection methods, survey techniques, survey tools, data entry, data and data 			cleaning.</span>
+                                </li>
+                                <li><span>DATA conducts trainings on data collection methods, survey techniques, survey tools, data entry, data and data 			cleaning.</span>
+                                </li>
+                            </ul>
+                            <div style="margin: 0;margin-top: 51px;" class="btn learn-more no-margin">Training Details
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+    <section id="contact" class="contact-us">
+        <div class="container">
+            <h1>Contact Us</h1>
+            <div class="row">
+                <div class="col-sm-5">
+                    <div class="location">
+                        <h4>Location</h4>
+                        <p>Data Analysis and
+                            <br> Technical Assistance (DATA)
+                            <br> 8/4, Block A (Unit 2)
+                            <br>Lalmatia, Dhaka - 1207
+                            <br> Bangladesh</p>
+                    </div>
+                    <div class="email">
+                        <h4>Email</h4>
+                        <p> dataqzz@bangla.net
+                            <br> info@databd.org </p>
+                    </div>
+                    <div class="phone">
+                        <h4>Phone</h4>
+                        <p>(880-2) 9120091
+                            <br> (880-2) 9117854 Fax
+                            <br>(880-2) 9111328</p>
+                    </div>
+                    <div class="website">
+                        <h4>Webaite</h4>
+                        <p style="margin: 0;">http://www.databd.org</p>
+                    </div>
+                </div>
+                <div class="col-sm-7">
+                    <form action="" class="form">
+                        <div class="row">
+                            <div class="col-sm-6">
+                                <label for="full-name">Full name</label>
+                                <input type="text" placeholder="Enter your full name"></div>
+                            <div class="col-sm-6">
+                                <label for="full-name">Email</label>
+                                <input type="email" placeholder="Enter your email"></div>
+                            <div class="col-sm-6">
+                                <label for="full-name">Phone number</label>
+                                <input type="text" placeholder="Enter your phone number"></div>
+                            <div class="col-sm-6">
+                                <label for="full-name">Purpose of contact</label>
+                                <input type="text" placeholder="General Enquiry"></div>
+                            <div class="col-sm-12">
+                                <label for="full-name">Purpose of contact</label>
+                                <textarea class="message-input" name="" id="" cols="30" rows="10"
+                                          placeholder="Write your message here"></textarea>
+                            </div>
+                            <div class="col-sm-12 text-center"><a href="" class="btn learn-more no-margin">Send
+                                Message</a></div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+{% endblock %}

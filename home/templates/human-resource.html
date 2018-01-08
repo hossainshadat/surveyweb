@@ -1,0 +1,64 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+
+    {% include 'navbar.html' %}
+    <div class="logistic">
+        <div class="container">
+            <h4>About <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span> <span style="color: #364dfe;">Human resource</span> </h4>
+            <h2>Human Resource</h2>
+            <p>List of Key professional in the related field</p>
+        </div>
+        <section class="human-resource">
+            <div class="container"> <a href="#" class="btn">a</a><a href="#" class="btn">b</a><a href="#" class="btn">c</a><a href="#" class="btn">d</a><a href="#" class="btn">e</a><a href="#" class="btn">f</a><a href="#" class="btn">g</a><a href="#" class="btn">h</a><a href="#" class="btn">i</a><a href="#" class="btn">j</a><a href="#" class="btn">k</a><a href="#" class="btn">l</a><a href="#" class="btn">m</a><a href="#" class="btn">n</a><a href="#" class="btn">o</a><a href="#" class="btn">p</a><a href="#" class="btn">q</a><a href="#" class="btn">r</a><a href="#" class="btn">s</a><a href="#" class="btn">t</a><a href="#" class="btn">u</a><a href="#" class="btn">v</a><a href="#" class="btn">x</a><a href="#" class="btn">y</a><a href="#" class="btn">z</a> </div>
+    </div>
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-12">
+                <div class="table-responsive">
+                    <table summary="This table shows how to create responsive tables using Bootstrap's default functionality" class="table table-bordered table-hover">
+                        <tr>
+                            <th class="member">Member</th>
+                            <th class="desc">Description / Specialization</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        {% for member in human %}
+                            <tr>
+                                <td class="grid-4">
+                                    <div class="profile"> <img class="img" src="/media/{{ member.image }}" alt="">
+                                        <div class="info">
+                                            <div class="name">{{ member.name }}</div>
+                                            <div class="education"> {{ member.education }} </div>
+                                            <div class="experience">{{ member.experience }} Years Experience</div>
+                                        </div>
+                                    </div>
+                                </td>
+                                <td>
+                                    <p class="para">{{ member.description }} </p>
+                                </td>
+                            </tr>
+                        {% endfor %}
+{#                            <tr>#}
+{#                                <td class="grid-4">#}
+{#                                    <div class="profile"> <img class="img" src="{% static 'img/person-2.png' %}" alt="">#}
+{#                                        <div class="info">#}
+{#                                            <div class="name">Md. Zobair</div>#}
+{#                                            <div class="education"> MA in Economics </div>#}
+{#                                            <div class="experience">25 Years Experience</div>#}
+{#                                        </div>#}
+{#                                    </div>#}
+{#                                </td>#}
+{#                                <td>#}
+{#                                    <p class="para">Research planning, survey design, coordination, training, administering and monitoring the survey, data input system design, data analysis, budgeting </p>#}
+{#                                </td>#}
+{#                            </tr>#}
+                        </tbody>
+                    </table>
+                </div>
+                <!--end of .table-responsive-->
+            </div>
+        </div>
+    </div>
+    </section>
+  {% endblock %}

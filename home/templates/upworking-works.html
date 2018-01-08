@@ -1,0 +1,106 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+
+    {% include 'navbar.html' %}
+        <div class="ongoing-works">
+            <div class="container">
+                <h2>Upcoming Works</h2> </div>
+        </div>
+        <div class="section sorting">
+            <div class="container">
+                <div class="left pull-left"> <span>Sort By</span><span><div class="dropdown">
+    <button class="btn dropdown-toggle" type="button" data-toggle="dropdown">None
+    <span class="caret"></span></button>
+                    <ul class="dropdown-menu">
+                        <li><a href="#">HTML</a></li>
+                        <li><a href="#">CSS</a></li>
+                        <li><a href="#">JavaScript</a></li>
+                    </ul>
+                </div>
+                </span>
+            </div>
+            <div class="pull-right right-part"><span>Show</span><span style="display: inline-block;"><div class="dropdown">
+    <button class="btn dropdown-toggle" type="button" data-toggle="dropdown">None
+    <span class="caret"></span></button>
+                <ul class="dropdown-menu">
+                    <li><a href="#">1</a></li>
+                    <li><a href="#">2</a></li>
+                    <li><a href="#">3</a></li>
+                    <li><a href="#">4</a></li>
+                    <li><a href="#">5</a></li>
+                    <li><a href="#">6</a></li>
+                    <li><a href="#">7</a></li>
+                    <li><a href="#">8</a></li>
+                    <li><a href="#">9</a></li>
+                </ul>
+            </div>
+            </span> <span class="per-page-sort">per page</span><span style="display: inline-block;"> <span><a href="#" class="btn per-page">1</a><a href="#" class="btn next"><span class="glyphicon glyphicon-play" aria-hidden="true"></span></a>
+            </span>
+            </span>
+        </div>
+        <div class="row">
+            <div class="col-xs-12">
+                <div class="table-responsive">
+                    <table summary="This table shows how to create responsive tables using Bootstrap's default functionality" class="table table-bordered table-hover">
+                        <thead class="text-center">
+                            <tr>
+                                <th class="count  fb">#</th>
+                                <th class="Project fb">Project</th>
+                                <th class="project-type fb">Project Type</th>
+                                <th class="time-period fb">Time Period</th>
+                                <th class="funding fb">Funding Agency</th>
+                                <th class="associates fb">Associates / Researchers</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                        {% for work in upcoming %}
+                            <tr>
+                                <td class="count">{{ work.serial }}</td>
+                                <td class="Project">{{ work.project_name }}</td>
+                                <td class="project-type">{{ work.project_type }}</td>
+                                <td class="time-period">{{ work.time_period }} {{ work.year }}</td>
+                                <td class="funding">{{ work.funding_agency }}</td>
+                                <th class="associates">{{ work.project_description }} </th>
+                            </tr>
+                        {% endfor %}
+{#                            <tr>#}
+{#                                <td class="count">2</td>#}
+{#                                <td class="Project">Bangladesh Aquaculture and Horticulture for Nutrition Research (BAHNR) , Baseline There will be three (3) follow up rounds of surveys.</td>#}
+{#                                <td class="project-type">Baseline</td>#}
+{#                                <td class="time-period">October 2015 - June 2016</td>#}
+{#                                <td class="funding">Tufts University Nutrition Innovation Lab. Sole Sourced</td>#}
+{#                                <th class="associates">Tufts University Nutrition Innovation Lab and Data Analysis And Technical Assistance Limited</th>#}
+{#                            </tr>#}
+{#                            <tr>#}
+{#                                <td class="count">3</td>#}
+{#                                <td class="Project">Agriculture Nutrition Gender Linkage (ANGeL) Study: RCT Design</td>#}
+{#                                <td class="project-type">Midline</td>#}
+{#                                <td class="time-period">November 2015 - June 2016</td>#}
+{#                                <td class="funding">IFPRI. Sole Sourced </td>#}
+{#                                <th class="associates">Data Analysis And Technical Assistance Limited, and International Food Policy Research Institute (IFPRI). </th>#}
+{#                            </tr>#}
+{#                            <tr>#}
+{#                                <td class="count">4</td>#}
+{#                                <td class="Project">Endline Survey of "Maximizing the Quality of Scaling Up Nutrition (SUN) programmes" funded by DFID in 2015</td>#}
+{#                                <td class="project-type">Midline</td>#}
+{#                                <td class="time-period">February 2016</td>#}
+{#                                <td class="funding">IDS at the University of Sussex. Sole sourced </td>#}
+{#                                <th class="associates">IDS, IFPRI and Data Analysis and Technical Assistance Limited</th>#}
+{#                    #}
+                    </table>
+                </div>
+                <!--end of .table-responsive-->
+            </div>
+            <div class="col-xs-12">
+                <div class="pull-left"> Showing 1-4 of 4 </div>
+                <div class="pull-right"> <span style="display: inline-block;"> <span><a href="#" class="btn per-page">1</a><a href="#" class="btn next table-next">Next<span class="glyphicon glyphicon-play" aria-hidden="true"></span></a>
+                    </span>
+                    </span>
+                </div>
+            </div>
+        </div>
+        </div>
+        </div>
+
+       {% endblock %}

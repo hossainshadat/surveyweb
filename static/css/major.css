@@ -1,0 +1,48 @@
+.ongoing-works h2 {
+    margin-bottom: 10px;
+}
+
+.ongoing-works h4 {
+    margin-bottom: 50px;
+    color: #2e3033;
+    font-size: 21px;
+    font-weight: 500;
+    line-height: 33.33px;
+}
+
+.sorting .btn {
+    font-weight: 400;
+    color: #2a2a2a;
+    font-size: 17px;
+}
+
+.sorting .pull-right .btn.per-page {
+    padding-right: 20px;
+    padding-left: 20px;
+    margin-right: 5px;
+}
+
+.sorting .pull-right span.glyphicon {
+    padding-left: 10px;
+    font-size: 15px;
+    color: #007bff;
+}
+
+.sorting .pull-right .btn.next.next-btn {
+    padding-left: 10px;
+    color: #2a2a2a;
+    font-size: 17px;
+    font-weight: 400;
+    line-height: 33.33px;
+}
+
+.pagination-nav { margin: 30px 0 20px 0; }
+.pagination-nav ul {margin: 0; padding: 0;}
+.pagination-nav ul li {display: inline-block; margin: 3px; padding: 4px 8px; background: #FFF; color: black; }
+.pagination-nav ul li.active:hover {cursor: pointer; background: #367fa9; color: white; }
+.pagination-nav ul li.inactive {background: #CACACA;}
+.pagination-nav ul li.selected {background: #367fa9; color: white;}
+
+
+
+

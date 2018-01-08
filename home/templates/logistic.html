@@ -1,0 +1,161 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+
+    {% include 'navbar.html' %}
+    <div class="logistic">
+        <div class="container">
+            <h4>About <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span> <span style="color: #364dfe;">Logistics</span> </h4>
+            <h2>Logistics</h2>
+            <p>Physical Facilities and Logistical Support</p>
+            <p class="para">DATA has the necessary physical facilities and logistical support to implement its assignments with efficiency and on time. Besides modern office equipment and communication facilities, it has a project-related reference library, a data bank, and a reprographics unit. DATA has a fully developed computer section with all the necessary hardware and software and has well-qualified instructors who carry on upgrading the skills of the data entry operators on a regular basis. Data analysis is done by professional data analysis team. Computers are connected through a LAN (local area network) system that enables fast and efficient data management. Also have a variety of spreadsheet and statistical software that are an essential part of data management. The currently available equipment and logistical support of DATA are the following: </p>
+            <p>Equipments and Facilities: </p>
+        </div>
+       <section class="logistics" style="
+    padding: 0 30px;
+    overflow: hidden;
+    overflow-x: auto;
+">
+            <div class="container fixed-width-container">
+                <div class="row border-bottom">
+                    <div class="col-xs-4 border-right">
+                        <h1>Service type</h1> </div>
+                    <div class="col-xs-6 border-right">
+                        <h1>Name of Equipment/Facility</h1> </div>
+                    <div class="col-xs-2 text-center">
+                        <h1>Quantity</h1> </div>
+                </div>
+
+                    {% for title in maintitle %}
+                <div class="row border-bottom">
+                    <div class="col-xs-4">
+                        <h1>{{ title.title }}</h1>
+                        {% for sub in subtitle %}
+                            {% if sub.servicetype.title == title.title %}
+                        <h3 class="sub-title">{{ sub.sub_title }}</h3>
+                            {% endif %}
+                        {% endfor %}
+                            </div>
+                    <div class="col-xs-6 border-left border-right">
+                            {% for tool in facility %}
+                        {% if tool.subtitle.servicetype.title  == title.title %}
+                        <h1>{{ tool.Equipement_name }}</h1>
+                        {% endif %}
+                    {% endfor %}
+{#                        <h1>Torch light</h1>#}
+{#                        <h1>Umbrella</h1>#}
+{#                        <h1>Carrying bag</h1>#}
+{#                        <h1>Large Ice chest for carrying blood and other samples</h1>#}
+{#                        <h1>Geographical Positioning System GPS</h1>#}
+{#                        <h1>Bathroom Scale (UNI-Scale)</h1>#}
+{#                        <h1>Bathroom Scale (Standard)</h1>#}
+{#                        <h1>Height measurement tools</h1>#}
+{#                        <h1>Audio recorder (tape)</h1>#}
+{#                        <h1>Audio recorder (digital)</h1>#}
+{#                        <h1>Still camera</h1>#}
+{#                        <h1>Video camera</h1> #}
+                    </div>
+                    <div class="col-xs-2 text-center">
+                        {% for tool in facility %}
+                        {% if tool.subtitle.servicetype.title  == title.title %}
+                        <h1>{{ tool.quantity }}</h1>
+                            {% endif %}
+                    {% endfor %}
+
+{#                        <h1>40</h1>#}
+{#                        <h1>2</h1>#}
+{#                        <h1>2</h1>#}
+{#                        <h1>50</h1>#}
+{#                        <h1>9</h1>#}
+{#                        <h1>70</h1>#}
+{#                        <h1>80</h1>#}
+{#                        <h1>3</h1>#}
+{#                        <h1>8</h1>#}
+{#                        <h1>4</h1>#}
+{#                        <h1>1</h1>#}
+                    </div>
+{#                    <div class="col-xs-4">#}
+{#                        <h3 class="sub-title">Survey utility</h3>#}
+{#                    </div>#}
+{#                    <div class="col-xs-6 border-left border-right">#}
+{#                        <h1>Name of Equipment/Facility</h1>#}
+{#                        <h1>Blood sample collection tools [type 1]</h1>#}
+{#                        <h1>Blood sample collection tools [type 2]</h1>#}
+{#                        <h1>Freezer for storing blood and other samples</h1> #}
+{#                    </div>#}
+{#                    <div class="col-xs-2 text-center">#}
+{#                        <h1>15</h1>#}
+{#                        <h1>75</h1>#}
+{#                        <h1>75</h1>#}
+{#                        <h1>500</h1> #}
+{#                    </div>#}
+                </div>
+                    {% endfor %}
+{#                <div class="row border-bottom">#}
+{#                    <div class="col-xs-4 border-right">#}
+{#                        <h1>B. Bio marker collection/ processing/ preservation</h1> </div>#}
+{#                    <div class="col-xs-6 border-right" style="#}
+{#    padding-bottom: 60px;#}
+{#">#}
+{#                        <h1 class="opacity-0">B. Bio marker collection/ processing/ preservation</h1> </div>#}
+{#                    <div class="col-xs-2 text-center">#}
+{#                        <h1 class="opacity-0">Quantity</h1> </div>#}
+{#                </div>#}
+{#                <div class="row border-bottom">#}
+{#                    <div class="col-xs-4">#}
+{#                        <h1>C. Mobile device for CAPI based survey</h1> </div>#}
+{#                    <div class="col-xs-6 border-left border-right">#}
+{#                        <h1>Samsung Tablet (Android)</h1>#}
+{#                        <h1>Samsung Tablet (Android)</h1>#}
+{#                        <h1>Lenovo Tablet (Android)</h1>#}
+{#                        <h1>Nexus 7 Tablet (Android) samples</h1>#}
+{#                        <h1>Mirus schoolmate netbook (windows)</h1> </div>#}
+{#                    <div class="col-xs-2 text-center">#}
+{#                        <h1>Quantity</h1> </div>#}
+{#                    <div class="col-xs-4">#}
+{#                        <h3 class="sub-title">Utilities for CAPI devices</h3> </div>#}
+{#                    <div style="padding-bottom:60px;" class="col-xs-6 border-left border-right">#}
+{#                        <h1>Power bank</h1></div>#}
+{#                    <div class="col-xs-2 text-center">#}
+{#                        <h1 class="opacity-0">Quantity</h1> </div>#}
+{#                </div>#}
+{#                <div class="row border-bottom">#}
+{#                    <div class="col-xs-4">#}
+{#                        <h1>D. Computer Facilities</h1>#}
+{#                        <h3 class="sub-title">I. Hardware</h3>#}
+{#                        <h5 class="another-sub-title">Office Administration &amp; Accounts</h5> </div>#}
+{#                    <div class="col-xs-6 border-left border-right">#}
+{#                        <h1 class="opacity-0">Samsung Tablet (Android)</h1>#}
+{#                        <h1 class="opacity-0">Samsung Tablet (Android)</h1>#}
+{#                        <h1>Pentium IV computer with internal DVD/CD burner</h1>#}
+{#                        <h1>Dell Pentium IV (Laptop) computer</h1>#}
+{#                        <h1>EPSON LQ - 2170 Printer</h1>#}
+{#                        <h1>Access to all devices through LAN</h1> </div>#}
+{#                    <div class="col-xs-2 text-center">#}
+{#                        <h1 class="opacity-0">1</h1>#}
+{#                        <h1 class="opacity-0">1</h1>#}
+{#                        <h1>1</h1>#}
+{#                        <h1>1</h1>#}
+{#                        <h1>1</h1> </div>#}
+{#                    <div class="col-xs-4">#}
+{#                        <h5 class="another-sub-title">Data Management</h5> </div>#}
+{#                    <div style="padding-bottom:60px;" class="col-xs-6 border-left border-right">#}
+{#                        <h1>Pentium IV computer with internal DVD/CD burner</h1>#}
+{#                        <h1>Dell Pentium IV (Laptop) computer</h1>#}
+{#                        <h1>Access to all devices through LAN</h1></div>#}
+{#                    <div class="col-xs-2 text-center">#}
+{#                        <h1>3</h1>#}
+{#                        <h1>1</h1> </div>#}
+{#                    <div class="col-xs-4">#}
+{#                        <h5 class="another-sub-title">Data Entry</h5> </div>#}
+{#                    <div style="padding-bottom:60px;" class="col-xs-6 border-left border-right">#}
+{#                        <h1>Pentium IV computer with internal DVD/CD burner</h1>#}
+{#                        <h1>Pentium III computer with internal CD burner</h1>#}
+{#                        <h1>Access to all devices through LAN</h1></div>#}
+{#                    <div class="col-xs-2 text-center">#}
+{#                        <h1>11</h1>#}
+{#                        <h1>3</h1> </div>#}
+{#                </div>#}
+            </div>
+        </section>
+        {% endblock %}

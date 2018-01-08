@@ -1,0 +1,227 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+
+    {% include 'navbar.html' %}
+
+    <div id="carousel" class="carousel slide carousel-fade" data-ride="carousel">
+        <ol class="carousel-indicators">
+            <li data-target="#carousel" data-slide-to="0" class="active"></li>
+            <li data-target="#carousel" data-slide-to="1"></li>
+            <li data-target="#carousel" data-slide-to="2"></li>
+        </ol>
+         <div class="carousel-inner">
+             {% for sliders in slider %}
+                 {% if sliders.pk == 1 %}
+            <div class="active item slide-1" style="background: url('/media/{{ sliders.slider }}') no-repeat;">
+                 {% else %}
+            <div class="item slide-2" style="background-image: url('/media/{{ sliders.slider }}');">
+                {% endif %}
+                <div class="container">
+            <h1 style="text-shadow: 1px 1px 9px rgba(0, 0, 0, 0.15);
+    color: #ffffff;
+    font-size: 53px;
+    font-weight: 500;
+    max-width: 870px;" >Trainings on Data Collection
+Methods, Survey Techniques,
+Survey tools, Data Entry and more..</h1>
+                </div>
+            </div>
+             {% endfor %}
+        </div>
+    </div>
+    <section class="news">
+        <div class="container">
+            <div class="row offer">
+                <h1 class="training-title">Training</h1>
+                <div class="offer-block">
+                    {% for work in training %}
+                    <div class="row">
+                        <div class="col-sm-12">
+                            <p>{{ work.title }}</p>
+                            <ul>
+                                {{ work.training_content | safe }}
+                            </ul>
+                        </div>
+                    </div>
+                    {% endfor %}
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="gallery" style="padding-bottom: 00px; margin-top: -100px;">
+        <div class="container">
+            <h1>Image Gallery:</h1>
+            <div class="regular slider">
+                {% for image in gallery %}
+                <div> <img src="/media/{{ image.gallery_image }}"> </div>
+                {% endfor %}
+{#                <div> <img src="{% static 'img/sldier-2.png' %}"> </div>#}
+{#                <div> <img src="{% static 'img/slider-3.png' %}"> </div>#}
+{#                <div> <img src="{% static 'img/slider-4.png' %}"> </div>#}
+{#                <div> <img src="{% static 'img/sldier-1.png' %}"> </div>#}
+{#                <div> <img src="{% static 'img/sldier-2.png' %}"> </div>#}
+            </div>
+        </div>
+    </section>
+<!--
+    <div class="section contact-us">
+        <div class="container">
+            <h1 class="text-center">Contact us to apply for our next training session</h1>
+            <div class="row">
+                <div class="col-sm-8 col-sm-offset-2">
+                    <form action="" class="form">
+                        <div class="row">
+                            <div class="col-sm-6">
+                                <label for="full-name">Full name</label>
+                                <input type="text" placeholder="Enter your full name"> </div>
+                            <div class="col-sm-6">
+                                <label for="full-name">Email</label>
+                                <input type="email" placeholder="Enter your email"> </div>
+                            <div class="col-sm-6">
+                                <label for="full-name">Phone number</label>
+                                <input type="text" placeholder="Enter your phone number"> </div>
+                            <div class="col-sm-6">
+                                <label for="full-name">Purpose of contact</label>
+                                <input type="text" placeholder="General Enquiry"> </div>
+                            <div class="col-sm-12">
+                                <label for="full-name">Purpose of contact</label>
+                                <textarea class="message-input" name="" id="" cols="30" rows="10" placeholder="Write your message here"></textarea>
+                            </div>
+                            <div class="col-sm-12 text-center"> <a href="" class="btn learn-more no-margin">Send Message</a> </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+-->
+ {% endblock %}
+    <script type="text/javascript">
+        $(document).on('ready', function () {
+//            $(".vertical-center-4").slick({
+//                dots: true
+//                , vertical: true
+//                , centerMode: true
+//                , slidesToShow: 4
+//                , slidesToScroll: 2
+//            });
+//            $(".vertical-center-3").slick({
+//                dots: true
+//                , vertical: true
+//                , centerMode: true
+//                , slidesToShow: 3
+//                , slidesToScroll: 3
+//            });
+//            $(".vertical-center-2").slick({
+//                dots: true
+//                , vertical: true
+//                , centerMode: true
+//                , slidesToShow: 2
+//                , slidesToScroll: 2
+//            });
+//            $(".vertical-center").slick({
+//                dots: true
+//                , vertical: true
+//                , centerMode: true
+//            , });
+//            $(".vertical").slick({
+//                dots: false
+//                , vertical: true
+//                , slidesToShow: 3
+//                , slidesToScroll: 3
+//            });
+//            $(".regular").slick({
+//                infinite: true
+//                , slidesToShow: 4
+//                , arrows: true
+//                , slidesToScroll: 3
+//                ,arrows:true
+//                ,responsive: [
+//    {
+//      breakpoint: 1024,
+//      settings: {
+//        slidesToShow: 3,
+//        slidesToScroll: 3,
+//        infinite: true,
+//        dots: true
+//      }
+//    },
+//    {
+//      breakpoint: 600,
+//      settings: {
+//        slidesToShow: 2,
+//        slidesToScroll: 2
+//      }
+//    },
+//    {
+//      breakpoint: 480,
+//      settings: {
+//        slidesToShow: 1,
+//        slidesToScroll: 1
+//      }
+//    }
+//            });
+//            $(".center").slick({
+//                dots: true
+//                , infinite: true
+//                , centerMode: true
+//                , slidesToShow: 5
+//                , slidesToScroll: 3
+//            });
+//            $(".variable").slick({
+//                dots: true
+//                , infinite: true
+//                , variableWidth: true
+//            });
+//            $(".lazy").slick({
+//                lazyLoad: 'ondemand', // ondemand progressive anticipated
+//                infinite: true
+//            });
+        });
+                    $(".regular").slick({
+                infinite: true
+                , slidesToShow: 4
+                , arrows: true
+                , slidesToScroll: 3
+                ,arrows:true,
+  responsive: [
+    {
+      breakpoint: 1024,
+      settings: {
+        slidesToShow: 3,
+        slidesToScroll: 3,
+        infinite: true,
+        dots: true
+      }
+    },
+    {
+      breakpoint: 600,
+      settings: {
+        slidesToShow: 2,
+        slidesToScroll: 2
+      }
+    },
+    {
+      breakpoint: 480,
+      settings: {
+        slidesToShow: 1,
+        slidesToScroll: 1
+      }
+    }
+    // You can unslick at a given breakpoint now by adding:
+    // settings: "unslick"
+    // instead of a settings object
+  ]
+});
+    </script>
+    <script>
+        $('.dropdown').hover(function () {
+            $(this).find('.dropdown-menu').stop(true, true).delay(200).fadeIn(500);
+        }, function () {
+            $(this).find('.dropdown-menu').stop(true, true).delay(200).fadeOut(500);
+        });
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,66 @@
+{% load static %}
+.carousel-fade .carousel-inner .item {
+  -webkit-transition-property: opacity;
+  transition-property: opacity;
+}
+.carousel-fade .carousel-inner .item,
+.carousel-fade .carousel-inner .active.left,
+.carousel-fade .carousel-inner .active.right {
+  opacity: 0;
+}
+.carousel-fade .carousel-inner .active,
+.carousel-fade .carousel-inner .next.left,
+.carousel-fade .carousel-inner .prev.right {
+  opacity: 1;
+}
+.carousel-fade .carousel-inner .next,
+.carousel-fade .carousel-inner .prev,
+.carousel-fade .carousel-inner .active.left,
+.carousel-fade .carousel-inner .active.right {
+  left: 0;
+  -webkit-transform: translate3d(0, 0, 0);
+          transform: translate3d(0, 0, 0);
+}
+.carousel-fade .carousel-control {
+  z-index: 2;
+}
+html,
+body,
+.carousel,
+.carousel-inner,
+.carousel-inner .item {
+  height: 500px;
+}
+
+#carousel-inner .item:nth-child(1) {
+    background-size:cover;
+    background-position:center;
+}
+
+#carousel-inner .item:nth-child(2) {
+    background-size:cover;
+    background-position:center;
+}
+#carousel-inner .item:nth-child(3) {
+    background-size:cover;
+    background-position:center;
+}
+.item h1 {
+    color: #ffffff;
+    font-size: 53.45px;
+    font-weight: 500;
+    text-shadow: 0px 1px 9px rgba(0, 0, 0, 0.15);
+    max-width: 520px;
+    margin-bottom: 43px;
+    margin-top: 0;
+    padding-top: 115px;
+}
+
+.item h4 {
+    color: #ffffff;
+    font-size: 20.83px;
+    font-weight: 400;
+    line-height: 33.333px;
+    text-align: left;
+    max-width: 530px;
+}

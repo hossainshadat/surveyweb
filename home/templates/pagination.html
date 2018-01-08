@@ -1,0 +1,25 @@
+{% if is_paginated %}
+<ul class="pagination">
+{% if page_obj.has_previous %}
+<li>
+    <a rel="prev" href="?page={{ page_obj.previous_page_number }}{% for key, value in request.GET.items %}{% if key != 'page' %}&{{ key }}={{ value }}{% endif %}{% endfor %}">
+        <i class="fa fa-angle-double-left"></i> Назад
+    </a>
+</li>
+{% endif %}
+{% for page in list_of_pages %}
+    <li {% if page_obj.number == page %}class="active"{% endif %}>
+        <a href="?page={{ page }}{% for key, value in request.GET.items %}{% if key != 'page' %}&{{ key }}={{ value }}{% endif %}{% endfor %}">
+            {{ page }}
+        </a>
+    </li>
+{% endfor %}
+{% if page_obj.has_next %}
+<li>
+    <a rel="next" href="?page={{ page_obj.next_page_number }}{% for key, value in request.GET.items %}{% if key != 'page' %}&{{ key }}={{ value }}{% endif %}{% endfor %}">
+        Напред <i class="fa fa-angle-double-right"></i>
+    </a>
+</li>
+{% endif %}
+</ul>
+{% endif %}

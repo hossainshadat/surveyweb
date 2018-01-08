@@ -1,0 +1,81 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+
+    {% include 'navbar.html' %}
+
+    <div class="reports">
+        <div class="container">
+            <h4>About <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span> <span style="color: #364dfe;">Reports</span> </h4>
+            <h2>Reports</h2>
+            <p>List of multiple reports grouped by years </p>
+            <div class="report-block">
+                <div class="row no-margin">
+                    <div class="col-sm-2 no-padding">
+                        <h5 class="report-title border-right border-bottom">Years</h5> </div>
+                    <div class="col-sm-5 no-padding">
+                        <h5 class="report-title border-right border-bottom">Report</h5> </div>
+                    <div class="col-sm-5 no-padding">
+                        <h5 class="report-title border-bottom">View / Download </h5> </div>
+                </div>
+{#                <div class="row no-margin data">#}
+{#                    <div class="col-sm-2 no-padding">#}
+{#                        <h5 class="report-title border-right border-bottom data border-bottom-none"></h5> </div>#}
+{#                    <div class="col-sm-5 no-padding">#}
+{#                        <h5 class="report-title border-right border-bottom data">DATA BD AUDIT REPORT 2015, 2016</h5> </div>#}
+{#                    <div class="col-sm-5 no-padding">#}
+{#                        <h5 class="report-title border-bottom"> <a href="#" class="btn">View PDF</a><a href="#" class="btn transparent-bg">Download PDF <span><img src="{% static "img/download.png"  %}" alt=""></span> </a> </h5> </div>#}
+{#                </div>#}
+{#                <div class="row no-margin data border-bottom">#}
+{#                    <div class="col-sm-2 no-padding">#}
+{#                        <h5 class="report-title border-right border-bottom data border-bottom-none"></h5> </div>#}
+{#                    <div class="col-sm-5 no-padding">#}
+{#                        <h5 class="report-title border-right border-bottom data">DATA BD AUDIT REPORT 2015, 2016</h5> </div>#}
+{#                    <div class="col-sm-5 no-padding">#}
+{#                        <h5 class="report-title border-bottom"> <a href="#" class="btn">View PDF</a><a href="#" class="btn transparent-bg">Download PDF <span><img src="{% static "img/download.png"  %}" alt=""></span> </a> </h5> </div>#}
+{#                </div>#}
+{#                <div class="row no-margin data">#}
+{#                    <div class="col-sm-2 no-padding">#}
+{#                        <h5 class="report-title border-right border-bottom data border-bottom-none"></h5> </div>#}
+{#                    <div class="col-sm-5 no-padding">#}
+{#                        <h5 class="report-title border-right border-bottom data">DATA BD AUDIT REPORT 2015, 2016</h5> </div>#}
+{#                    <div class="col-sm-5 no-padding">#}
+{#                        <h5 class="report-title border-bottom"> <a href="#" class="btn">View PDF</a><a href="#" class="btn transparent-bg">Download PDF <span><img src="{% static "img/download.png"  %}" alt=""></span> </a> </h5> </div>#}
+{#                </div>#}
+{#                <div class="row no-margin data">#}
+{#                    <div class="col-sm-2 no-padding">#}
+{#                        <h5 class="report-title border-right border-bottom data">2015 - 2016</h5> </div>#}
+{#                    <div class="col-sm-5 no-padding">#}
+{#                        <h5 class="report-title border-right border-bottom data">DATA BD AUDIT REPORT 2015, 2016</h5> </div>#}
+{#                    <div class="col-sm-5 no-padding">#}
+{#                        <h5 class="report-title border-bottom"> <a href="#" class="btn">View PDF</a><a href="#" class="btn transparent-bg">Download PDF <span><img src="{% static "img/download.png"  %}" alt=""></span> </a> </h5> </div>#}
+{#                </div>#}
+                {% for report in latest %}
+                <div class="row no-margin data">
+                    <div class="col-sm-2 no-padding">
+                        <h5 class="report-title border-right border-bottom data">{{ report.start_year }} - {{ report.end_year }}</h5>
+                    </div>
+                    <div class="col-sm-5 no-padding">
+                        {% for data in reports %}
+                            {% if data.year.title == report.title %}
+                        <h5 class="report-title border-right border-bottom data">{{ data.title }} {{ data.ending_year }}, {{ data.beginning_year }}</h5>
+                            {% endif %}
+                        {% endfor %}
+                            </div>
+                    <div class="col-sm-5 no-padding">
+                        <h5 class="report-title border-bottom"> <a href="#" class="btn">View PDF</a><a href="#" class="btn transparent-bg">Download PDF <span><img src="{% static "img/download.png"  %}" alt=""></span> </a> </h5> </div>
+                </div>
+                {% endfor %}
+{#                <div class="row no-margin data">#}
+{#                    <div class="col-sm-2 no-padding">#}
+{#                        <h5 class="report-title border-right border-bottom data">2015 - 2016</h5> </div>#}
+{#                    <div class="col-sm-5 no-padding">#}
+{#                        <h5 class="report-title border-right border-bottom data">DATA BD AUDIT REPORT 2015, 2016</h5> </div>#}
+{#                    <div class="col-sm-5 no-padding">#}
+{#                        <h5 class="report-title border-bottom"> <a href="#" class="btn">View PDF</a><a href="#" class="btn transparent-bg">Download PDF <span><img src="{% static "img/download.png"  %}" alt=""></span> </a> </h5> </div>#}
+{#                </div>#}
+            </div>
+        </div>
+    </div>
+
+    {% endblock %}

@@ -1,0 +1,146 @@
+header .login-search .log-in {
+    padding: 0;
+    padding: 15px 40px;
+    border-radius: 5px;
+    border: 1px solid #2532d3;
+    cursor: pointer;
+}
+
+.major-works {
+    padding: 90px 0;
+}
+
+.major-works h1 {
+    color: #2a2a2a;
+    font-size: 38px;
+    font-weight: 400;
+    margin-bottom: 38px;
+}
+
+.major-works h4 {
+    color: #2e3033;
+    font-size: 21px;
+    font-weight: 500;
+    line-height: 33.33px;
+    margin-bottom: 70px;
+}
+
+.major-works .tags {
+    margin: 0;
+    margin-bottom: 70px;
+}
+
+.major-works p {
+    color: #2a2a2a;
+    font-size: 21px;
+    font-weight: 400;
+    line-height: 37.5px;
+    letter-spacing: 0.52px;
+}
+
+.major-works ol {
+    padding-left: 30px;
+    font-size: 21px;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    font-weight: 400;
+}
+
+.glyphicon {
+    position: relative;
+    top: -1px;
+    display: inline-block;
+    font-family: 'Glyphicons Halflings';
+    font-style: normal;
+    font-weight: 400;
+    line-height: 1;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    font-size: 11px;
+    font-weight: 100;
+    color: rgba(0, 0, 0, 0.52);
+    margin: 0 10px;
+}
+
+.publication {
+    padding: 85px 0;
+}
+
+.publication ol {
+    padding-left: 30px;
+}
+
+.publication h1 {
+    color: #070185;
+    font-size: 33px;
+    font-weight: 400;
+    margin-bottom: 34px;
+}
+
+.publication ol li {
+    color: #070185;
+    font-size: 21px;
+    font-weight: 400;
+    line-height: 37.5px;
+    padding: 5px 0;
+    text-decoration: underline;
+    letter-spacing: 0.52px;
+}
+
+.gallery {
+    margin-bottom: 120px;
+    margin-top: 80px;
+}
+
+.gallery h1 {
+    margin-bottom: 24px;
+}
+
+.gallery .regular {
+    padding: 20px;
+    background-color: #f6f9fb;
+}
+
+.location .panel a {
+    background-image: linear-gradient(to top, rgba(244, 248, 249, 0.5) 0%, rgba(255, 255, 255, 0.5) 100%);
+    color: #2a2a2a;
+    font-size: 21px;
+    font-weight: 400;
+    line-height: 37.5px;
+    letter-spacing: 0.52px;
+    position: relative;
+}
+
+.location .panel-default>.panel-heading {
+    position: relative;
+}
+
+.location .panel-default>.panel-heading .glyphicon-chevron-down {
+    position: absolute;
+    right: 10px;
+    top: 25px;
+}
+
+.location .panel ul {
+    list-style: none;
+}
+
+.location .panel ul li {
+    color: #2a2a2a;
+    font-size: 21px;
+    font-weight: 400;
+    line-height: 33.33px;
+    letter-spacing: 0.52px;
+}
+
+.contact-us {
+    border-bottom: 2px solid #aeb0b5;
+}
+
+.contact-us .hr {
+    padding: 0;
+    margin: 0;
+    height: 2px;
+    padding: 30px 0;
+    background-color: #aeb0b5;
+}

@@ -1,0 +1,108 @@
+.no-margin {
+    margin: 0;
+}
+
+.hide {
+    opacity: 0;
+    border: none;
+}
+
+.no-padding {
+    padding: 0;
+}
+
+.reports h4 {
+    color: #2e3033;
+    font-size: 21px;
+    font-weight: 500;
+    line-height: 33.33px;
+    margin-top: 89px;
+    margin-bottom: 52px;
+}
+
+.glyphicon {
+    position: relative;
+    top: -1px;
+    display: inline-block;
+    font-family: 'Glyphicons Halflings';
+    font-style: normal;
+    font-weight: 400;
+    line-height: 1;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    font-size: 11px;
+    font-weight: 100;
+    color: rgba(0, 0, 0, 0.52);
+}
+
+.reports h2 {
+    color: #364dfe;
+    font-size: 33px;
+    font-weight: 500;
+    margin-bottom: 15px;
+}
+
+.reports p {
+    color: #2a2a2a;
+    font-size: 21px;
+    font-weight: 400;
+    line-height: 37.5px;
+    letter-spacing: 0.52px;
+    margin-bottom: 45px;
+}
+
+.reports .report-block {
+    box-shadow: 0 0 12px 1px rgba(0, 0, 0, 0.09);
+    border-radius: 5px;
+    background-color: #ffffff;
+}
+
+.reports .report-block .report-title {
+    color: #2a2a2a;
+    font-size: 17px;
+    font-weight: 400;
+    line-height: 30.6px;
+    letter-spacing: 2.73px;
+    height: 90px;
+    margin: 0;
+    padding: 0 30px;
+    padding-top: 30px;
+}
+
+.border-right {
+    border-right: 1px solid #d8dfe5;
+}
+
+.border-bottom {
+    border-bottom: 1px solid #d8dfe5;
+}
+
+.data {
+    font-size: 19px;
+}
+
+.report-block .btn {
+    background-color: #364dfe;
+    color: #fff;
+    padding: 9px 17px;
+    margin-left: 10px;
+    font-size: 15px;
+    position: relative;
+    top: -8px;
+}
+
+.report-block .btn:hover {
+    background-color: #364dfe;
+    color: color: #4156fe;
+    ;
+}
+
+.report-block .btn.transparent-bg {
+    background: transparent;
+    color: #4156fe;
+    border: 1px solid #7f8eff;
+}
+
+.border-bottom-none {
+    border-bottom: none;
+}

@@ -1,0 +1,191 @@
+.fixed-width-container {
+    box-shadow: 0 0 12px 1px rgba(0, 0, 0, 0.09);
+    width: 1150px;
+}
+
+.fixed-width-container h1 {
+    margin: 0;
+    padding: 0;
+    color: #2a2a2a;
+    font-size: 17px;
+    font-weight: 400;
+    line-height: 30.6px;
+    letter-spacing: 2.73px;
+}
+
+.col-xs-4,
+.col-xs-6,
+.col-xs-2 {
+    padding: 30px;
+    margin: 0;
+}
+
+.col-xs-4 h1,
+.col-xs-4 h3,
+.col-xs-4 h5 {
+    font-weight: 600;
+}
+
+.no-margin {
+    margin: 0;
+}
+
+.sub-title {
+    padding-left: 30px;
+    color: #2a2a2a;
+    font-size: 17px;
+    font-weight: 400;
+    letter-spacing: 0.83px;
+    margin-top: 0;
+    margin-bottom: 20px;
+}
+
+.another-sub-title {
+    padding-left: 60px;
+    color: #2a2a2a;
+    font-size: 17px;
+    font-weight: 400;
+    letter-spacing: 0.83px;
+    margin-top: 0;
+}
+
+.opacity-0 {
+    opacity: 0;
+}
+
+.margin-top-0 {
+    margin-top: 0;
+}
+
+.hide {
+    opacity: 0;
+    border: none;
+}
+
+.no-padding {
+    padding: 0;
+}
+
+.logistic h4 {
+    color: #2e3033;
+    font-size: 21px;
+    font-weight: 500;
+    line-height: 33.33px;
+    margin-top: 89px;
+    margin-bottom: 52px;
+}
+
+.glyphicon {
+    position: relative;
+    top: -1px;
+    display: inline-block;
+    font-family: 'Glyphicons Halflings';
+    font-style: normal;
+    font-weight: 400;
+    line-height: 1;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    font-size: 11px;
+    font-weight: 100;
+    color: rgba(0, 0, 0, 0.52);
+}
+
+.logistic h2 {
+    color: #364dfe;
+    font-size: 33px;
+    font-weight: 500;
+    margin-bottom: 15px;
+}
+
+.logistic p {
+    color: #2a2a2a;
+    font-size: 21px;
+    font-weight: 400;
+    line-height: 37.5px;
+    letter-spacing: 0.52px;
+    margin-bottom: 45px;
+}
+
+.logostic .para {
+    color: #2a2a2a;
+    font-size: 21px;
+    font-weight: 400;
+    line-height: 37.5px;
+    letter-spacing: 0.52px;
+}
+
+.logistic .logistic-block {
+    box-shadow: 0 0 12px 1px rgba(0, 0, 0, 0.09);
+    border-radius: 5px;
+    background-color: #ffffff;
+}
+
+.logistic .logistic-block .logistic-title {
+    color: #2a2a2a;
+    font-size: 17px;
+    font-weight: bold;
+    line-height: 30.6px;
+    letter-spacing: 2.73px;
+    height: 130px;
+    margin: 0;
+    padding: 0 30px;
+    padding-top: 50px;
+}
+
+.logistic .logistic-block .logistic-title.sub-cattegory {
+    margin-top: 0;
+    padding-top: 10px;
+    position: relative;
+    top: -45px;
+    left: 33px;
+}
+
+.logistic .logistic-block .logistic-title.Survey-utility {
+    padding-left: 60px;
+    padding-top: 0;
+}
+
+.hide-element {
+    opacity: 0;
+}
+
+.logistic .logistic-block .logistic-title.title-light {
+    font-weight: 100;
+}
+
+.border-top {
+    border-top: 1px solid #d8dfe5;
+}
+
+.border-right {
+    border-right: 1px solid #d8dfe5;
+}
+
+.border-left {
+    border-left: 1px solid #d8dfe5;
+}
+
+.border-bottom {
+    border-bottom: 1px solid #d8dfe5;
+}
+
+.border-bottom-none {
+    border-bottom: none;
+}
+
+.logistic .datas {
+    position: relative;
+    top: -48px;
+    padding-left: 30px;
+}
+
+.logistic .datas.Survey-utility-datas {
+    top: 0;
+}
+
+.logistic .datas h2 {
+    color: #2a2a2a;
+    font-size: 17px;
+    font-weight: 400;
+    letter-spacing: 0.83px;
+}

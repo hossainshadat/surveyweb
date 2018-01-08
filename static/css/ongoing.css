@@ -1,0 +1,187 @@
+.ongoing-works h2 {
+    color: #364dfe;
+    font-size: 33px;
+    font-weight: 500;
+    margin-top: 83px;
+    margin-bottom: 53px;
+}
+
+.sorting .left {
+    display: -webkit-flex;
+    display: -moz-flex;
+    display: -ms-flex;
+    display: -o-flex;
+    display: flex;
+    flex-direction: row;
+}
+
+.sorting .left span {
+    margin-right: 10px;
+}
+
+.sorting .btn {
+    border-radius: 5px;
+    border: 1px solid rgba(215, 223, 227, 0.5);
+    background-color: #ffffff;
+    width: 172px;
+    height: 40px;
+    text-align: left;
+    padding-left: 10px;
+    position: relative;
+    top: -10px;
+}
+
+.sorting .caret {
+    position: absolute;
+    right: 0;
+    top: 18px;
+}
+
+.sorting .dropdown-menu {
+    top: 70%;
+    left: 0;
+    width: 100%;
+}
+
+.sorting .pull-right .btn {
+    border-radius: 5px;
+    border: 1px solid rgba(215, 223, 227, 0.5);
+    background-color: #ffffff;
+    height: 40px;
+    text-align: left;
+    padding-left: 10px;
+    position: relative;
+    padding: 5px 20px;
+    top: 0;
+    width: auto;
+    padding-right: 43px;
+    padding-left: 10px;
+}
+
+.per-page-sort {
+    color: #5a626a;
+    font-size: 17px;
+    font-weight: 400;
+    line-height: 33.33px;
+}
+
+.sorting .pull-right .btn.per-page {
+    padding-right: 20px;
+    padding-left: 20px;
+}
+
+.sorting .pull-right .btn.next {
+    padding-right: 0;
+    color: rgba(0, 0, 0, 0.32);
+    margin-left: 5px;
+}
+
+.sorting .pull-right span {
+    margin-right: 15px;
+    color: #2e3033;
+}
+
+.sorting .pull-right.right-part {
+    position: relative;
+    top: -10px;
+}
+
+span.download {
+    color: #4156fe;
+    font-size: 17px;
+    font-weight: 400;
+    line-height: 33.33px;
+}
+
+.table {
+    width: 1130px;
+}
+
+th,
+td {
+    color: #2a2a2a;
+    font-size: 17px;
+    letter-spacing: 0.83px;
+}
+
+td.project {
+    width: 230px;
+    text-align: left;
+    padding-left: 15px;
+}
+
+.count {
+    width: 70px;
+    font-weight: 400;
+}
+
+.project {
+    width: 280px;
+    text-align: left;
+    padding-left: 15px;
+    font-weight: 400;
+}
+
+.project-type {
+    width: 120px;
+    text-align: left;
+    padding-left: 15px;
+    font-weight: 400;
+}
+
+.time-period {
+    width: 125px;
+    text-align: left;
+    padding-left: 15px;
+    font-weight: 400;
+}
+
+.funding {
+    width: 175px;
+    text-align: left;
+    padding-left: 15px;
+    font-weight: 400;
+}
+
+.associates {
+    width: 215px;
+    text-align: left;
+    padding-left: 15px;
+    font-weight: 400;
+}
+
+.table>tbody>tr>td,
+.table>tbody>tr>th,
+.table>tfoot>tr>td,
+.table>tfoot>tr>th,
+.table>thead>tr>td,
+.table>thead>tr>th {
+    padding-left: 15px;
+}
+
+.sorting .pull-right .btn.table-next {
+    color: #2a2a2a;
+    font-size: 17px;
+    font-weight: 400;
+    line-height: 33.33px;
+    padding: 5px 10px;
+}
+
+.sorting .pull-right .btn.table-next .glyphicon-play {
+    padding-left: 10px;
+    color: rgba(0, 0, 0, 0.39);
+    font-size: 13px;
+}
+
+.glyphicon.glyphicon-play {
+    top: 5px;
+    left: 3px;
+}
+
+.glyphicon.glyphicon-play-next {
+    top: 1px;
+}
+
+.fb {
+    font-weight: 600;
+}

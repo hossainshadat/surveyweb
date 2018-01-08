@@ -1,0 +1,180 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+
+
+    {% include 'navbar.html' %}
+    <section class="major-works">
+        <div class="container">
+            {% for survey in detail %}
+            <div class="row">
+                <div class="col-sm-12">
+                    <h4>Major Works <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span><span
+                            style="color: #364dfe;">Survey #12</span></h4>
+                </div>
+                <div class="col-sm-12">
+                    <h1>{{ survey.title| safe }}</h1>
+                    <h4 class="tags"><span style="color: #364dfe;">Survey Type:</span>
+                        <span style="margin-right:20px;"></span>{{ survey.project_type }}<span style="margin-right:40px;"></span>
+                        <span style="color: #364dfe;">Survey Tags:</span><span style="margin-right:20px;"></span>{{ survey.survey_tag }}<span style="margin-right:40px;"></span><span style="margin-right:20px;"></span> <span
+                                style="color: #2a2a2a;font-weight: bold;">Last Updated:</span> {{ survey.last_update }}</h4>
+                    <p>{{ survey.project_description | safe }}</p>
+{#                    <p>The overall objective of implementing and evaluating the pilot test is to strengthen and#}
+{#                        streamline#}
+{#                        the social safety net system in Bangladesh by identifying and scaling up the most#}
+{#                        cost-effective,#}
+{#                        multi-year safety net program to improve the food security and livelihoods of the ultra poor.#}
+{#                        The#}
+{#                        specific objectives of evaluation are to:</p>#}
+{#                    <ol>#}
+{#                        <li>Establish relevance of the transfer modalities in addressing poverty, food insecurity and#}
+{#                            undernutrition of the ultra poor households.#}
+{#                        </li>#}
+{#                        <li>Document, using rigorous impact evaluation designs, the impact and cost-effectiveness of#}
+{#                            each of#}
+{#                            the 5 arms of the pilot test on key outcomes.#}
+{#                        </li>#}
+{#                    </ol>#}
+{#                    <p>DATA did the census in 500 villages to identify the beneficiaries of the program and completed#}
+{#                        the#}
+{#                        baseline and first year follow up surveys. There will be another round of survey for two years'#}
+{#                        evaluation in March-April 2014.</p>#}
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+    </section>
+    <section class="gallery" style="margin-top: -100px;">
+        <div class="container">
+            <h1>Image Gallery:</h1>
+            <div class="regular slider">
+                {% for image in gallery %}
+                <div><img src="/media/{{ image.gallery_image }}"></div>
+                {% endfor %}
+            </div>
+        </div>
+    </section>
+    <section class="location" style="margin-top: -100px;">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-9">
+                    <div class="map">
+                        {% for image in publication %}
+                        <img src="/media/{{ image.location }}">
+                        {% endfor %}
+                    </div>
+                </div>
+                <div class="col-sm-3">
+                    <div class="accordion">
+                        <div class="panel-group" id="accordion">
+                            <div class="panel panel-default">
+                                <div class="panel-heading"><span class="glyphicon glyphicon-chevron-down"
+                                                                 aria-hidden="true"></span>
+                                    <h4 class="panel-title">
+                                        <a data-toggle="collapse" data-parent="#accordion"
+                                           href="#collapse1">Kurigram</a>
+                                    </h4></div>
+                                <div id="collapse1" class="panel-collapse collapse in">
+                                    <div class="panel-body">
+                                        <ul>
+                                            <li>Nageshwari Road</li>
+                                            <li>P.S. : Nageswari</li>
+                                            <li>Dist. : Kurigram</li>
+                                            <li>Post Code : 5660</li>
+                                            <li>Cell: 01730009693</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="panel panel-default">
+                                <div class="panel-heading"><span class="glyphicon glyphicon-chevron-down"
+                                                                 aria-hidden="true"></span>
+                                    <h4 class="panel-title">
+                                        <a data-toggle="collapse" data-parent="#accordion"
+                                           href="#collapse2">Chittogong</a>
+                                    </h4></div>
+                                <div id="collapse2" class="panel-collapse collapse">
+                                    <div class="panel-body">
+                                        <ul>
+                                            <li>Nageshwari Road</li>
+                                            <li>P.S. : Nageswari</li>
+                                            <li>Dist. : Kurigram</li>
+                                            <li>Post Code : 5660</li>
+                                            <li>Cell: 01730009693</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="panel panel-default">
+                                <div class="panel-heading"><span class="glyphicon glyphicon-chevron-down"
+                                                                 aria-hidden="true"></span>
+                                    <h4 class="panel-title">
+                                        <a data-toggle="collapse" data-parent="#accordion"
+                                           href="#collapse3">Shunamgonj</a>
+                                    </h4></div>
+                                <div id="collapse3" class="panel-collapse collapse">
+                                    <div class="panel-body">
+                                        <ul>
+                                            <li>Nageshwari Road</li>
+                                            <li>P.S. : Nageswari</li>
+                                            <li>Dist. : Kurigram</li>
+                                            <li>Post Code : 5660</li>
+                                            <li>Cell: 01730009693</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        </div>
+    </section>
+{% for link in publication %}
+    <section class="publication">
+        <div class="container">
+            <h1>Publications:</h1>
+            <div class="row">
+                <div class="col-sm-10">
+                    <ol>
+                        <li>{{ link.publication_link|safe }}</li>
+                        <!--<li>Helms, B., Xantor, Z., Myer, B. (2008): Art and Science. In: The Art of Science, Eds. Xu,-->
+                            <!--L.,-->
+                            <!--Fox, A.B. (Canberra: A + S Press), 23-46.-->
+                        <!--</li>-->
+                    </ol>
+                </div>
+            </div>
+        </div>
+    </section>
+{% endfor %}
+    <div class="section contact-us">
+        <div class="container">
+            <h1>Contact on Specific Project:</h1>
+            <div class="row">
+                <div class="col-sm-7">
+                    <form action="" class="form">
+                        <div class="row">
+                            <div class="col-sm-6">
+                                <label for="full-name">Full name</label>
+                                <input type="text" placeholder="Enter your full name"></div>
+                            <div class="col-sm-6">
+                                <label for="full-name">Email</label>
+                                <input type="email" placeholder="Enter your email"></div>
+                            <div class="col-sm-6">
+                                <label for="full-name">Phone number</label>
+                                <input type="text" placeholder="Enter your phone number"></div>
+                            <div class="col-sm-12">
+                                <label for="full-name">Message</label>
+                                <textarea class="message-input" name="" id="" cols="30" rows="10"
+                                          placeholder="Write your message here"></textarea>
+                            </div>
+                            <div class="col-sm-12"><a href="" class="btn learn-more no-margin">Send Message</a></div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}
